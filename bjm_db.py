@@ -10,7 +10,7 @@ import yaml
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 CONFIG_FILE = open('db_config.yml', 'r')
-CONFIG_DATA = yaml.load(CONFIG_FILE, Loader=yaml.FullLoader)
+CONFIG_DATA = yaml.load(CONFIG_FILE, Loader=yaml.SafeLoader)
 
 CATEGORY_URL = 'https://www.benjones.com/api/categories.php'
 MACHINE_URL = 'https://www.benjones.com/api/machines.php'
